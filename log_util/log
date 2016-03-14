@@ -1,0 +1,673 @@
+2016-03-14 11:18:48,063 DEBUG [org.springframework.transaction.support.TransactionSynchronizationManager] - Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@2296abdc] for key [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1br82km9fvxp1q3tnmko1|34059959, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1br82km9fvxp1q3tnmko1|34059959, idleConnectionTestPeriod -> 1800, initialPoolSize -> 5, jdbcUrl -> jdbc:oracle:thin:@172.29.213.202:1521:ORCL, lastAcquisitionFailureDefaultUser -> null, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] bound to thread [http-nio-8081-exec-4]
+2016-03-14 11:18:48,063 DEBUG [org.springframework.transaction.interceptor.TransactionInterceptor] - Completing transaction for [com.founder.zdrygl.base.service.FkryQsService.handleQs] after exception: org.springframework.jdbc.BadSqlGrammarException: SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:
+--- The error occurred while applying a parameter map.
+--- Check the Fkryjbxx.queryByEntity-InlineParameterMap.
+--- Check the statement (query failed).
+--- Cause: java.sql.SQLSyntaxErrorException: ORA-00942: 表或视图不存在
+
+2016-03-14 11:18:48,063 DEBUG [org.springframework.transaction.interceptor.RuleBasedTransactionAttribute] - Applying rules to determine whether transaction should rollback on org.springframework.jdbc.BadSqlGrammarException: SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:
+--- The error occurred while applying a parameter map.
+--- Check the Fkryjbxx.queryByEntity-InlineParameterMap.
+--- Check the statement (query failed).
+--- Cause: java.sql.SQLSyntaxErrorException: ORA-00942: 表或视图不存在
+
+2016-03-14 11:18:48,063 DEBUG [org.springframework.transaction.interceptor.RuleBasedTransactionAttribute] - Winning rollback rule is: null
+2016-03-14 11:18:48,064 DEBUG [org.springframework.transaction.interceptor.RuleBasedTransactionAttribute] - No relevant rollback rule found: applying default rules
+2016-03-14 11:18:48,064 DEBUG [org.springframework.jdbc.datasource.DataSourceTransactionManager] - Triggering beforeCompletion synchronization
+2016-03-14 11:18:48,064 DEBUG [org.springframework.jdbc.datasource.DataSourceTransactionManager] - Initiating transaction rollback
+2016-03-14 11:18:48,064 DEBUG [org.springframework.jdbc.datasource.DataSourceTransactionManager] - Rolling back JDBC transaction on Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@60b6980c]
+2016-03-14 11:18:48,066 DEBUG [org.springframework.jdbc.datasource.DataSourceTransactionManager] - Triggering afterCompletion synchronization
+2016-03-14 11:18:48,067 DEBUG [org.springframework.transaction.support.TransactionSynchronizationManager] - Clearing transaction synchronization
+2016-03-14 11:18:48,074 DEBUG [org.springframework.transaction.support.TransactionSynchronizationManager] - Removed value [org.springframework.jdbc.datasource.ConnectionHolder@2296abdc] for key [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1br82km9fvxp1q3tnmko1|34059959, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1br82km9fvxp1q3tnmko1|34059959, idleConnectionTestPeriod -> 1800, initialPoolSize -> 5, jdbcUrl -> jdbc:oracle:thin:@172.29.213.202:1521:ORCL, lastAcquisitionFailureDefaultUser -> null, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] from thread [http-nio-8081-exec-4]
+2016-03-14 11:18:48,074 DEBUG [org.springframework.jdbc.datasource.DataSourceTransactionManager] - Releasing JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@60b6980c] after transaction
+2016-03-14 11:18:48,075 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Returning JDBC Connection to DataSource
+2016-03-14 11:18:48,075 DEBUG [com.mchange.v2.resourcepool.BasicResourcePool] - trace com.mchange.v2.resourcepool.BasicResourcePool@1d84ed88 [managed: 5, unused: 4, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2891d892)
+org.springframework.jdbc.BadSqlGrammarException: SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:
+--- The error occurred while applying a parameter map.
+--- Check the Fkryjbxx.queryByEntity-InlineParameterMap.
+--- Check the statement (query failed).
+--- Cause: java.sql.SQLSyntaxErrorException: ORA-00942: 表或视图不存在
+
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:237)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.springframework.orm.ibatis.SqlMapClientTemplate.execute(SqlMapClientTemplate.java:206)
+	at org.springframework.orm.ibatis.SqlMapClientTemplate.queryForObject(SqlMapClientTemplate.java:271)
+	at com.founder.framework.base.dao.BaseDaoImpl.queryForObject(BaseDaoImpl.java:55)
+	at com.founder.zdrygl.base.dao.FkryjbxxDao.query(FkryjbxxDao.java:62)
+	at com.founder.zdrygl.base.service.FkryQsService.handleFkryJbxx(FkryQsService.java:88)
+	at com.founder.zdrygl.base.service.FkryQsService.handleQs(FkryQsService.java:60)
+	at com.founder.zdrygl.base.service.FkryQsService$$FastClassByCGLIB$$be9497d.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:698)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:150)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:96)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:260)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:94)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:631)
+	at com.founder.zdrygl.base.service.FkryQsService$$EnhancerByCGLIB$$7fca83ea.handleQs(<generated>)
+	at com.founder.zdrygl.base.controller.FkryQsController.doFkryQs(FkryQsController.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:219)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:745)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:686)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:838)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:617)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:668)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1521)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1478)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.ibatis.common.jdbc.exception.NestedSQLException:
+--- The error occurred while applying a parameter map.
+--- Check the Fkryjbxx.queryByEntity-InlineParameterMap.
+--- Check the statement (query failed).
+--- Cause: java.sql.SQLSyntaxErrorException: ORA-00942: 表或视图不存在
+
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeQueryWithCallback(MappedStatement.java:201)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeQueryForObject(MappedStatement.java:120)
+	at com.ibatis.sqlmap.engine.impl.SqlMapExecutorDelegate.queryForObject(SqlMapExecutorDelegate.java:518)
+	at com.ibatis.sqlmap.engine.impl.SqlMapExecutorDelegate.queryForObject(SqlMapExecutorDelegate.java:493)
+	at com.ibatis.sqlmap.engine.impl.SqlMapSessionImpl.queryForObject(SqlMapSessionImpl.java:106)
+	at org.springframework.orm.ibatis.SqlMapClientTemplate$1.doInSqlMapClient(SqlMapClientTemplate.java:273)
+	at org.springframework.orm.ibatis.SqlMapClientTemplate.execute(SqlMapClientTemplate.java:203)
+	... 62 more
+Caused by: java.sql.SQLSyntaxErrorException: ORA-00942: 表或视图不存在
+
+	at oracle.jdbc.driver.SQLStateMapping.newSQLException(SQLStateMapping.java:91)
+	at oracle.jdbc.driver.DatabaseError.newSQLException(DatabaseError.java:133)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:206)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:455)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:413)
+	at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:1034)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:194)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:791)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeMaybeDescribe(T4CPreparedStatement.java:866)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1186)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3387)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3488)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1374)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.execute(NewProxyPreparedStatement.java:989)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.ibatis.common.jdbc.logging.PreparedStatementLogProxy.invoke(PreparedStatementLogProxy.java:62)
+	at com.sun.proxy.$Proxy53.execute(Unknown Source)
+	at com.ibatis.sqlmap.engine.execution.SqlExecutor.executeQuery(SqlExecutor.java:185)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.sqlExecuteQuery(MappedStatement.java:221)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeQueryWithCallback(MappedStatement.java:189)
+	... 68 more
+2016-03-14 11:18:48,077 DEBUG [org.springframework.web.method.HandlerMethod] - Method [doFkryQs] returned [<map>
+  <entry>
+    <string>response</string>
+    <string>反恐人员签收失败！</string>
+  </entry>
+  <entry>
+    <string>resStatus</string>
+    <string>0</string>
+  </entry>
+</map>]
+2016-03-14 11:18:48,077 DEBUG [org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite] - Testing if return value handler [org.springframework.web.servlet.mvc.method.annotation.ModelAndViewMethodReturnValueHandler@6cd05f5] supports [class java.lang.String]
+2016-03-14 11:18:48,077 DEBUG [org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite] - Testing if return value handler [org.springframework.web.method.annotation.ModelMethodProcessor@260f204b] supports [class java.lang.String]
+2016-03-14 11:18:48,077 DEBUG [org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite] - Testing if return value handler [org.springframework.web.servlet.mvc.method.annotation.ViewMethodReturnValueHandler@7541fb74] supports [class java.lang.String]
+2016-03-14 11:18:48,077 DEBUG [org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite] - Testing if return value handler [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor@587a7ff1] supports [class java.lang.String]
+2016-03-14 11:18:48,078 DEBUG [org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite] - Testing if return value handler [org.springframework.web.servlet.mvc.method.annotation.CallableMethodReturnValueHandler@6dbcf84b] supports [class java.lang.String]
+2016-03-14 11:18:48,078 DEBUG [org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite] - Testing if return value handler [org.springframework.web.servlet.mvc.method.annotation.DeferredResultMethodReturnValueHandler@6c48061b] supports [class java.lang.String]
+2016-03-14 11:18:48,078 DEBUG [org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite] - Testing if return value handler [org.springframework.web.servlet.mvc.method.annotation.AsyncTaskMethodReturnValueHandler@49a44beb] supports [class java.lang.String]
+2016-03-14 11:18:48,078 DEBUG [org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite] - Testing if return value handler [org.springframework.web.method.annotation.ModelAttributeMethodProcessor@5934c1c5] supports [class java.lang.String]
+2016-03-14 11:18:48,078 DEBUG [org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite] - Testing if return value handler [org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor@44faf1f5] supports [class java.lang.String]
+2016-03-14 11:18:48,079 DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor] - Written [<map>
+  <entry>
+    <string>response</string>
+    <string>反恐人员签收失败！</string>
+  </entry>
+  <entry>
+    <string>resStatus</string>
+    <string>0</string>
+  </entry>
+</map>] as "text/plain;charset=UTF-8" using [org.springframework.http.converter.StringHttpMessageConverter@1b86be2e]
+2016-03-14 11:18:48,079 DEBUG [org.springframework.web.servlet.DispatcherServlet] - Null ModelAndView returned to DispatcherServlet with name 'springmvc': assuming HandlerAdapter completed request handling
+2016-03-14 11:18:48,079 DEBUG [org.springframework.web.servlet.DispatcherServlet] - Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@679daafe
+2016-03-14 11:18:48,079 DEBUG [org.springframework.web.servlet.DispatcherServlet] - Successfully completed request
+2016-03-14 11:18:48,080 DEBUG [org.springframework.web.context.support.XmlWebApplicationContext] - Publishing event in WebApplicationContext for namespace 'springmvc-servlet': ServletRequestHandledEvent: url=[/jwzh-province/FkryQs/doFkryQs]; client=[127.0.0.1]; method=[POST]; servlet=[springmvc]; session=[null]; user=[null]; time=[105ms]; status=[OK]
+2016-03-14 11:18:48,080 DEBUG [org.springframework.web.context.support.XmlWebApplicationContext] - Publishing event in Root WebApplicationContext: ServletRequestHandledEvent: url=[/jwzh-province/FkryQs/doFkryQs]; client=[127.0.0.1]; method=[POST]; servlet=[springmvc]; session=[null]; user=[null]; time=[105ms]; status=[OK]
+2016-03-14 11:18:49,816 DEBUG [org.springframework.web.servlet.DispatcherServlet] - Bound request context to thread: org.apache.catalina.connector.RequestFacade@679daafe
+2016-03-14 11:18:49,816 DEBUG [org.springframework.web.servlet.DispatcherServlet] - DispatcherServlet with name 'springmvc' processing POST request for [/jwzh-province/FkryRyjbxx/queryByEntity]
+2016-03-14 11:18:49,816 DEBUG [org.springframework.web.servlet.DispatcherServlet] - Testing handler map [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping@5c41fd14] in DispatcherServlet with name 'springmvc'
+2016-03-14 11:18:49,817 DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Looking up handler method for path /FkryRyjbxx/queryByEntity
+2016-03-14 11:18:49,817 DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Found 1 matching mapping(s) for [/FkryRyjbxx/queryByEntity] : [{[/FkryRyjbxx/queryByEntity],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}]
+2016-03-14 11:18:49,817 DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Returning handler method [public java.lang.String com.founder.zdrygl.base.controller.FkryRyjbxxController.queryByEntity(java.lang.String)]
+2016-03-14 11:18:49,817 DEBUG [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Returning cached instance of singleton bean 'fkryRyjbxxController'
+2016-03-14 11:18:49,818 DEBUG [org.springframework.web.servlet.DispatcherServlet] - Testing handler adapter [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter@2221edfa]
+2016-03-14 11:18:49,819 DEBUG [org.springframework.web.method.support.HandlerMethodArgumentResolverComposite] - Testing if argument resolver [org.springframework.web.method.annotation.RequestParamMethodArgumentResolver@3a11091d] supports [class java.lang.String]
+2016-03-14 11:18:49,819 DEBUG [org.springframework.web.method.support.HandlerMethodArgumentResolverComposite] - Testing if argument resolver [org.springframework.web.method.annotation.RequestParamMapMethodArgumentResolver@429568e8] supports [class java.lang.String]
+2016-03-14 11:18:49,819 DEBUG [org.springframework.web.method.support.HandlerMethodArgumentResolverComposite] - Testing if argument resolver [org.springframework.web.servlet.mvc.method.annotation.PathVariableMethodArgumentResolver@431e6ff9] supports [class java.lang.String]
+2016-03-14 11:18:49,819 DEBUG [org.springframework.web.method.support.HandlerMethodArgumentResolverComposite] - Testing if argument resolver [org.springframework.web.servlet.mvc.method.annotation.PathVariableMapMethodArgumentResolver@deb18cf] supports [class java.lang.String]
+2016-03-14 11:18:49,819 DEBUG [org.springframework.web.method.support.HandlerMethodArgumentResolverComposite] - Testing if argument resolver [org.springframework.web.servlet.mvc.method.annotation.MatrixVariableMethodArgumentResolver@ccfef6f] supports [class java.lang.String]
+2016-03-14 11:18:49,819 DEBUG [org.springframework.web.method.support.HandlerMethodArgumentResolverComposite] - Testing if argument resolver [org.springframework.web.servlet.mvc.method.annotation.MatrixVariableMapMethodArgumentResolver@7cd26088] supports [class java.lang.String]
+2016-03-14 11:18:49,819 DEBUG [org.springframework.web.method.support.HandlerMethodArgumentResolverComposite] - Testing if argument resolver [org.springframework.web.servlet.mvc.method.annotation.ServletModelAttributeMethodProcessor@6e06e54c] supports [class java.lang.String]
+2016-03-14 11:18:49,820 DEBUG [org.springframework.web.method.support.HandlerMethodArgumentResolverComposite] - Testing if argument resolver [org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor@20721767] supports [class java.lang.String]
+2016-03-14 11:18:49,820 DEBUG [org.springframework.web.method.support.HandlerMethodArgumentResolverComposite] - Testing if argument resolver [org.springframework.web.servlet.mvc.method.annotation.RequestPartMethodArgumentResolver@70aab9ed] supports [class java.lang.String]
+2016-03-14 11:18:49,820 DEBUG [org.springframework.web.method.support.HandlerMethodArgumentResolverComposite] - Testing if argument resolver [org.springframework.web.method.annotation.RequestHeaderMethodArgumentResolver@9c8a2ab] supports [class java.lang.String]
+2016-03-14 11:18:49,820 DEBUG [org.springframework.web.method.support.HandlerMethodArgumentResolverComposite] - Testing if argument resolver [org.springframework.web.method.annotation.RequestHeaderMapMethodArgumentResolver@781c3b15] supports [class java.lang.String]
+2016-03-14 11:18:49,820 DEBUG [org.springframework.web.method.support.HandlerMethodArgumentResolverComposite] - Testing if argument resolver [org.springframework.web.servlet.mvc.method.annotation.ServletCookieValueMethodArgumentResolver@3b50eea9] supports [class java.lang.String]
+2016-03-14 11:18:49,821 DEBUG [org.springframework.web.method.support.HandlerMethodArgumentResolverComposite] - Testing if argument resolver [org.springframework.web.method.annotation.ExpressionValueMethodArgumentResolver@2ba709a1] supports [class java.lang.String]
+2016-03-14 11:18:49,821 DEBUG [org.springframework.web.method.support.HandlerMethodArgumentResolverComposite] - Testing if argument resolver [org.springframework.web.servlet.mvc.method.annotation.ServletRequestMethodArgumentResolver@12c27b23] supports [class java.lang.String]
+2016-03-14 11:18:49,821 DEBUG [org.springframework.web.method.support.HandlerMethodArgumentResolverComposite] - Testing if argument resolver [org.springframework.web.servlet.mvc.method.annotation.ServletResponseMethodArgumentResolver@5ab58f20] supports [class java.lang.String]
+2016-03-14 11:18:49,821 DEBUG [org.springframework.web.method.support.HandlerMethodArgumentResolverComposite] - Testing if argument resolver [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor@38078054] supports [class java.lang.String]
+2016-03-14 11:18:49,821 DEBUG [org.springframework.web.method.support.HandlerMethodArgumentResolverComposite] - Testing if argument resolver [org.springframework.web.servlet.mvc.method.annotation.RedirectAttributesMethodArgumentResolver@7fb98d75] supports [class java.lang.String]
+2016-03-14 11:18:49,822 DEBUG [org.springframework.web.method.support.HandlerMethodArgumentResolverComposite] - Testing if argument resolver [org.springframework.web.method.annotation.ModelMethodProcessor@6855a3dc] supports [class java.lang.String]
+2016-03-14 11:18:49,822 DEBUG [org.springframework.web.method.support.HandlerMethodArgumentResolverComposite] - Testing if argument resolver [org.springframework.web.method.annotation.MapMethodProcessor@67606dd0] supports [class java.lang.String]
+2016-03-14 11:18:49,822 DEBUG [org.springframework.web.method.support.HandlerMethodArgumentResolverComposite] - Testing if argument resolver [org.springframework.web.method.annotation.ErrorsMethodArgumentResolver@421935c] supports [class java.lang.String]
+2016-03-14 11:18:49,822 DEBUG [org.springframework.web.method.support.HandlerMethodArgumentResolverComposite] - Testing if argument resolver [org.springframework.web.method.annotation.SessionStatusMethodArgumentResolver@6e71ae10] supports [class java.lang.String]
+2016-03-14 11:18:49,822 DEBUG [org.springframework.web.method.support.HandlerMethodArgumentResolverComposite] - Testing if argument resolver [org.springframework.web.servlet.mvc.method.annotation.UriComponentsBuilderMethodArgumentResolver@4a5b8bbc] supports [class java.lang.String]
+2016-03-14 11:18:49,822 DEBUG [org.springframework.web.method.support.HandlerMethodArgumentResolverComposite] - Testing if argument resolver [org.springframework.web.method.annotation.RequestParamMethodArgumentResolver@28af9b93] supports [class java.lang.String]
+2016-03-14 11:18:49,823 DEBUG [org.springframework.web.method.HandlerMethod] - Invoking [queryByEntity] method with arguments [<com.founder.zdrygl.base.model.Fkryjbxx>
+  <ryxh>null</ryxh>
+</com.founder.zdrygl.base.model.Fkryjbxx>]
+2016-03-14 11:18:49,823 INFO [com.founder.zdrygl.base.controller.FkryRyjbxxController] - 查询反恐人员基本信息
+2016-03-14 11:18:49,824 DEBUG [org.springframework.beans.factory.support.DefaultListableBeanFactory] - Returning cached instance of singleton bean 'transactionManager'
+2016-03-14 11:18:49,824 DEBUG [org.springframework.jdbc.datasource.DataSourceTransactionManager] - Creating new transaction with name [com.founder.zdrygl.base.service.FkryjbxxService.queryByEntity]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+2016-03-14 11:18:49,824 DEBUG [com.mchange.v2.resourcepool.BasicResourcePool] - trace com.mchange.v2.resourcepool.BasicResourcePool@1d84ed88 [managed: 5, unused: 4, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2891d892)
+2016-03-14 11:18:49,825 DEBUG [org.springframework.jdbc.datasource.DataSourceTransactionManager] - Acquired Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@3b20b813] for JDBC transaction
+2016-03-14 11:18:49,825 DEBUG [org.springframework.jdbc.datasource.DataSourceTransactionManager] - Switching JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@3b20b813] to manual commit
+2016-03-14 11:18:49,834 DEBUG [org.springframework.transaction.support.TransactionSynchronizationManager] - Bound value [org.springframework.jdbc.datasource.ConnectionHolder@7cab2ec8] for key [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1br82km9fvxp1q3tnmko1|34059959, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1br82km9fvxp1q3tnmko1|34059959, idleConnectionTestPeriod -> 1800, initialPoolSize -> 5, jdbcUrl -> jdbc:oracle:thin:@172.29.213.202:1521:ORCL, lastAcquisitionFailureDefaultUser -> null, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] to thread [http-nio-8081-exec-5]
+2016-03-14 11:18:49,834 DEBUG [org.springframework.transaction.support.TransactionSynchronizationManager] - Initializing transaction synchronization
+2016-03-14 11:18:49,834 DEBUG [org.springframework.transaction.interceptor.TransactionInterceptor] - Getting transaction for [com.founder.zdrygl.base.service.FkryjbxxService.queryByEntity]
+2016-03-14 11:18:49,835 DEBUG [org.springframework.orm.ibatis.SqlMapClientTemplate] - Opened SqlMapSession [com.ibatis.sqlmap.engine.impl.SqlMapSessionImpl@16dcf3ec] for iBATIS operation
+2016-03-14 11:18:49,843 DEBUG [org.springframework.transaction.support.TransactionSynchronizationManager] - Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@7cab2ec8] for key [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1br82km9fvxp1q3tnmko1|34059959, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1br82km9fvxp1q3tnmko1|34059959, idleConnectionTestPeriod -> 1800, initialPoolSize -> 5, jdbcUrl -> jdbc:oracle:thin:@172.29.213.202:1521:ORCL, lastAcquisitionFailureDefaultUser -> null, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] bound to thread [http-nio-8081-exec-5]
+2016-03-14 11:18:49,843 DEBUG [java.sql.Connection] - {conn-100033} Connection
+2016-03-14 11:18:49,844 DEBUG [org.springframework.orm.ibatis.SqlMapClientTemplate] - Obtained JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@3b20b813] for iBATIS operation
+2016-03-14 11:18:49,845 DEBUG [java.sql.Connection] - {conn-100033} Preparing Statement:     select t.*,    to_char(tbsj,'yyyy-mm-dd hh24:mi:ss') as tbsjstr,    to_char(gxsj,'yyyy-mm-dd hh24:mi:ss') as gxsjstr,    to_char(csrq,'yyyy-MM-dd') as csrqstr,     to_char(yxqx,'yyyy-MM-dd') as yxqxstr,     (select ORGNAME from org_organization where ORGCODE=SSXJGAJG) as SSXJGAJGMC,    (select ORGNAME from org_organization where ORGCODE=SSPCS) as SSPCSMC    from FK_RYJBXX t where rownum = 1                                                                   and RYXH = ?                                                                                                                                         ORDER BY TBSJ DESC
+2016-03-14 11:18:49,845 DEBUG [java.sql.PreparedStatement] - {pstm-100034} Executing Statement:     select t.*,    to_char(tbsj,'yyyy-mm-dd hh24:mi:ss') as tbsjstr,    to_char(gxsj,'yyyy-mm-dd hh24:mi:ss') as gxsjstr,    to_char(csrq,'yyyy-MM-dd') as csrqstr,     to_char(yxqx,'yyyy-MM-dd') as yxqxstr,     (select ORGNAME from org_organization where ORGCODE=SSXJGAJG) as SSXJGAJGMC,    (select ORGNAME from org_organization where ORGCODE=SSPCS) as SSPCSMC    from FK_RYJBXX t where rownum = 1                                                                   and RYXH = ?                                                                                                                                         ORDER BY TBSJ DESC
+2016-03-14 11:18:49,845 DEBUG [java.sql.PreparedStatement] - {pstm-100034} Parameters: [null]
+2016-03-14 11:18:49,846 DEBUG [java.sql.PreparedStatement] - {pstm-100034} Types: [java.lang.String]
+2016-03-14 11:18:49,851 DEBUG [com.mchange.v2.c3p0.impl.NewPooledConnection] - com.mchange.v2.c3p0.impl.NewPooledConnection@2891d892 handling a throwable.
+java.sql.SQLSyntaxErrorException: ORA-00942: 表或视图不存在
+
+	at oracle.jdbc.driver.SQLStateMapping.newSQLException(SQLStateMapping.java:91)
+	at oracle.jdbc.driver.DatabaseError.newSQLException(DatabaseError.java:133)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:206)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:455)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:413)
+	at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:1034)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:194)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:791)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeMaybeDescribe(T4CPreparedStatement.java:866)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1186)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3387)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3488)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1374)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.execute(NewProxyPreparedStatement.java:989)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.ibatis.common.jdbc.logging.PreparedStatementLogProxy.invoke(PreparedStatementLogProxy.java:62)
+	at com.sun.proxy.$Proxy53.execute(Unknown Source)
+	at com.ibatis.sqlmap.engine.execution.SqlExecutor.executeQuery(SqlExecutor.java:185)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.sqlExecuteQuery(MappedStatement.java:221)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeQueryWithCallback(MappedStatement.java:189)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeQueryForObject(MappedStatement.java:120)
+	at com.ibatis.sqlmap.engine.impl.SqlMapExecutorDelegate.queryForObject(SqlMapExecutorDelegate.java:518)
+	at com.ibatis.sqlmap.engine.impl.SqlMapExecutorDelegate.queryForObject(SqlMapExecutorDelegate.java:493)
+	at com.ibatis.sqlmap.engine.impl.SqlMapSessionImpl.queryForObject(SqlMapSessionImpl.java:106)
+	at org.springframework.orm.ibatis.SqlMapClientTemplate$1.doInSqlMapClient(SqlMapClientTemplate.java:273)
+	at org.springframework.orm.ibatis.SqlMapClientTemplate.execute(SqlMapClientTemplate.java:203)
+	at org.springframework.orm.ibatis.SqlMapClientTemplate.queryForObject(SqlMapClientTemplate.java:271)
+	at com.founder.framework.base.dao.BaseDaoImpl.queryForObject(BaseDaoImpl.java:55)
+	at com.founder.zdrygl.base.dao.FkryjbxxDao.query(FkryjbxxDao.java:62)
+	at com.founder.zdrygl.base.service.FkryjbxxService.queryByEntity(FkryjbxxService.java:65)
+	at com.founder.zdrygl.base.service.FkryjbxxService$$FastClassByCGLIB$$a7703247.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:698)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:150)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:96)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:260)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:94)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:631)
+	at com.founder.zdrygl.base.service.FkryjbxxService$$EnhancerByCGLIB$$e2b42d74.queryByEntity(<generated>)
+	at com.founder.zdrygl.base.controller.FkryRyjbxxController.queryByEntity(FkryRyjbxxController.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:219)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:745)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:686)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:838)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:617)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:668)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1521)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1478)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+2016-03-14 11:18:49,852 DEBUG [com.mchange.v2.sql.SqlUtils] - Attempted to convert SQLException to SQLException. Leaving it alone. [SQLState: 42000; errorCode: 942]
+java.sql.SQLSyntaxErrorException: ORA-00942: 表或视图不存在
+
+	at oracle.jdbc.driver.SQLStateMapping.newSQLException(SQLStateMapping.java:91)
+	at oracle.jdbc.driver.DatabaseError.newSQLException(DatabaseError.java:133)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:206)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:455)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:413)
+	at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:1034)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:194)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:791)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeMaybeDescribe(T4CPreparedStatement.java:866)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1186)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3387)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3488)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1374)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.execute(NewProxyPreparedStatement.java:989)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.ibatis.common.jdbc.logging.PreparedStatementLogProxy.invoke(PreparedStatementLogProxy.java:62)
+	at com.sun.proxy.$Proxy53.execute(Unknown Source)
+	at com.ibatis.sqlmap.engine.execution.SqlExecutor.executeQuery(SqlExecutor.java:185)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.sqlExecuteQuery(MappedStatement.java:221)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeQueryWithCallback(MappedStatement.java:189)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeQueryForObject(MappedStatement.java:120)
+	at com.ibatis.sqlmap.engine.impl.SqlMapExecutorDelegate.queryForObject(SqlMapExecutorDelegate.java:518)
+	at com.ibatis.sqlmap.engine.impl.SqlMapExecutorDelegate.queryForObject(SqlMapExecutorDelegate.java:493)
+	at com.ibatis.sqlmap.engine.impl.SqlMapSessionImpl.queryForObject(SqlMapSessionImpl.java:106)
+	at org.springframework.orm.ibatis.SqlMapClientTemplate$1.doInSqlMapClient(SqlMapClientTemplate.java:273)
+	at org.springframework.orm.ibatis.SqlMapClientTemplate.execute(SqlMapClientTemplate.java:203)
+	at org.springframework.orm.ibatis.SqlMapClientTemplate.queryForObject(SqlMapClientTemplate.java:271)
+	at com.founder.framework.base.dao.BaseDaoImpl.queryForObject(BaseDaoImpl.java:55)
+	at com.founder.zdrygl.base.dao.FkryjbxxDao.query(FkryjbxxDao.java:62)
+	at com.founder.zdrygl.base.service.FkryjbxxService.queryByEntity(FkryjbxxService.java:65)
+	at com.founder.zdrygl.base.service.FkryjbxxService$$FastClassByCGLIB$$a7703247.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:698)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:150)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:96)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:260)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:94)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:631)
+	at com.founder.zdrygl.base.service.FkryjbxxService$$EnhancerByCGLIB$$e2b42d74.queryByEntity(<generated>)
+	at com.founder.zdrygl.base.controller.FkryRyjbxxController.queryByEntity(FkryRyjbxxController.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:219)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:745)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:686)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:838)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:617)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:668)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1521)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1478)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+2016-03-14 11:18:49,853 DEBUG [com.mchange.v2.c3p0.impl.DefaultConnectionTester] - Testing a Connection in response to an Exception:
+java.sql.SQLSyntaxErrorException: ORA-00942: 表或视图不存在
+
+	at oracle.jdbc.driver.SQLStateMapping.newSQLException(SQLStateMapping.java:91)
+	at oracle.jdbc.driver.DatabaseError.newSQLException(DatabaseError.java:133)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:206)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:455)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:413)
+	at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:1034)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:194)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:791)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeMaybeDescribe(T4CPreparedStatement.java:866)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1186)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3387)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3488)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1374)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.execute(NewProxyPreparedStatement.java:989)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.ibatis.common.jdbc.logging.PreparedStatementLogProxy.invoke(PreparedStatementLogProxy.java:62)
+	at com.sun.proxy.$Proxy53.execute(Unknown Source)
+	at com.ibatis.sqlmap.engine.execution.SqlExecutor.executeQuery(SqlExecutor.java:185)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.sqlExecuteQuery(MappedStatement.java:221)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeQueryWithCallback(MappedStatement.java:189)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeQueryForObject(MappedStatement.java:120)
+	at com.ibatis.sqlmap.engine.impl.SqlMapExecutorDelegate.queryForObject(SqlMapExecutorDelegate.java:518)
+	at com.ibatis.sqlmap.engine.impl.SqlMapExecutorDelegate.queryForObject(SqlMapExecutorDelegate.java:493)
+	at com.ibatis.sqlmap.engine.impl.SqlMapSessionImpl.queryForObject(SqlMapSessionImpl.java:106)
+	at org.springframework.orm.ibatis.SqlMapClientTemplate$1.doInSqlMapClient(SqlMapClientTemplate.java:273)
+	at org.springframework.orm.ibatis.SqlMapClientTemplate.execute(SqlMapClientTemplate.java:203)
+	at org.springframework.orm.ibatis.SqlMapClientTemplate.queryForObject(SqlMapClientTemplate.java:271)
+	at com.founder.framework.base.dao.BaseDaoImpl.queryForObject(BaseDaoImpl.java:55)
+	at com.founder.zdrygl.base.dao.FkryjbxxDao.query(FkryjbxxDao.java:62)
+	at com.founder.zdrygl.base.service.FkryjbxxService.queryByEntity(FkryjbxxService.java:65)
+	at com.founder.zdrygl.base.service.FkryjbxxService$$FastClassByCGLIB$$a7703247.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:698)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:150)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:96)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:260)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:94)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:631)
+	at com.founder.zdrygl.base.service.FkryjbxxService$$EnhancerByCGLIB$$e2b42d74.queryByEntity(<generated>)
+	at com.founder.zdrygl.base.controller.FkryRyjbxxController.queryByEntity(FkryRyjbxxController.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:219)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:745)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:686)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:838)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:617)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:668)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1521)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1478)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+2016-03-14 11:18:49,856 DEBUG [org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator] - Translating SQLException with SQL state '42000', error code '942', message [
+--- The error occurred while applying a parameter map.
+--- Check the Fkryjbxx.queryByEntity-InlineParameterMap.
+--- Check the statement (query failed).
+--- Cause: java.sql.SQLSyntaxErrorException: ORA-00942: 表或视图不存在
+]; SQL was [] for task [SqlMapClient operation]
+2016-03-14 11:18:49,865 DEBUG [org.springframework.transaction.support.TransactionSynchronizationManager] - Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@7cab2ec8] for key [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1br82km9fvxp1q3tnmko1|34059959, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1br82km9fvxp1q3tnmko1|34059959, idleConnectionTestPeriod -> 1800, initialPoolSize -> 5, jdbcUrl -> jdbc:oracle:thin:@172.29.213.202:1521:ORCL, lastAcquisitionFailureDefaultUser -> null, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] bound to thread [http-nio-8081-exec-5]
+2016-03-14 11:18:49,865 DEBUG [org.springframework.transaction.interceptor.TransactionInterceptor] - Completing transaction for [com.founder.zdrygl.base.service.FkryjbxxService.queryByEntity] after exception: org.springframework.jdbc.BadSqlGrammarException: SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:
+--- The error occurred while applying a parameter map.
+--- Check the Fkryjbxx.queryByEntity-InlineParameterMap.
+--- Check the statement (query failed).
+--- Cause: java.sql.SQLSyntaxErrorException: ORA-00942: 表或视图不存在
+
+2016-03-14 11:18:49,865 DEBUG [org.springframework.transaction.interceptor.RuleBasedTransactionAttribute] - Applying rules to determine whether transaction should rollback on org.springframework.jdbc.BadSqlGrammarException: SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:
+--- The error occurred while applying a parameter map.
+--- Check the Fkryjbxx.queryByEntity-InlineParameterMap.
+--- Check the statement (query failed).
+--- Cause: java.sql.SQLSyntaxErrorException: ORA-00942: 表或视图不存在
+
+2016-03-14 11:18:49,866 DEBUG [org.springframework.transaction.interceptor.RuleBasedTransactionAttribute] - Winning rollback rule is: null
+2016-03-14 11:18:49,866 DEBUG [org.springframework.transaction.interceptor.RuleBasedTransactionAttribute] - No relevant rollback rule found: applying default rules
+2016-03-14 11:18:49,866 DEBUG [org.springframework.jdbc.datasource.DataSourceTransactionManager] - Triggering beforeCompletion synchronization
+2016-03-14 11:18:49,866 DEBUG [org.springframework.jdbc.datasource.DataSourceTransactionManager] - Initiating transaction rollback
+2016-03-14 11:18:49,866 DEBUG [org.springframework.jdbc.datasource.DataSourceTransactionManager] - Rolling back JDBC transaction on Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@3b20b813]
+2016-03-14 11:18:49,867 DEBUG [org.springframework.jdbc.datasource.DataSourceTransactionManager] - Triggering afterCompletion synchronization
+2016-03-14 11:18:49,868 DEBUG [org.springframework.transaction.support.TransactionSynchronizationManager] - Clearing transaction synchronization
+2016-03-14 11:18:49,875 DEBUG [org.springframework.transaction.support.TransactionSynchronizationManager] - Removed value [org.springframework.jdbc.datasource.ConnectionHolder@7cab2ec8] for key [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1br82km9fvxp1q3tnmko1|34059959, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1br82km9fvxp1q3tnmko1|34059959, idleConnectionTestPeriod -> 1800, initialPoolSize -> 5, jdbcUrl -> jdbc:oracle:thin:@172.29.213.202:1521:ORCL, lastAcquisitionFailureDefaultUser -> null, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1800, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] from thread [http-nio-8081-exec-5]
+2016-03-14 11:18:49,875 DEBUG [org.springframework.jdbc.datasource.DataSourceTransactionManager] - Releasing JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@3b20b813] after transaction
+2016-03-14 11:18:49,875 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Returning JDBC Connection to DataSource
+2016-03-14 11:18:49,876 DEBUG [com.mchange.v2.resourcepool.BasicResourcePool] - trace com.mchange.v2.resourcepool.BasicResourcePool@1d84ed88 [managed: 5, unused: 4, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2891d892)
+org.springframework.jdbc.BadSqlGrammarException: SqlMapClient operation; bad SQL grammar []; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:
+--- The error occurred while applying a parameter map.
+--- Check the Fkryjbxx.queryByEntity-InlineParameterMap.
+--- Check the statement (query failed).
+--- Cause: java.sql.SQLSyntaxErrorException: ORA-00942: 表或视图不存在
+
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:237)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.springframework.orm.ibatis.SqlMapClientTemplate.execute(SqlMapClientTemplate.java:206)
+	at org.springframework.orm.ibatis.SqlMapClientTemplate.queryForObject(SqlMapClientTemplate.java:271)
+	at com.founder.framework.base.dao.BaseDaoImpl.queryForObject(BaseDaoImpl.java:55)
+	at com.founder.zdrygl.base.dao.FkryjbxxDao.query(FkryjbxxDao.java:62)
+	at com.founder.zdrygl.base.service.FkryjbxxService.queryByEntity(FkryjbxxService.java:65)
+	at com.founder.zdrygl.base.service.FkryjbxxService$$FastClassByCGLIB$$a7703247.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:698)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:150)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:96)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:260)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:94)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:631)
+	at com.founder.zdrygl.base.service.FkryjbxxService$$EnhancerByCGLIB$$e2b42d74.queryByEntity(<generated>)
+	at com.founder.zdrygl.base.controller.FkryRyjbxxController.queryByEntity(FkryRyjbxxController.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:219)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:745)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:686)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:838)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:617)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:668)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1521)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1478)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.ibatis.common.jdbc.exception.NestedSQLException:
+--- The error occurred while applying a parameter map.
+--- Check the Fkryjbxx.queryByEntity-InlineParameterMap.
+--- Check the statement (query failed).
+--- Cause: java.sql.SQLSyntaxErrorException: ORA-00942: 表或视图不存在
+
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeQueryWithCallback(MappedStatement.java:201)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeQueryForObject(MappedStatement.java:120)
+	at com.ibatis.sqlmap.engine.impl.SqlMapExecutorDelegate.queryForObject(SqlMapExecutorDelegate.java:518)
+	at com.ibatis.sqlmap.engine.impl.SqlMapExecutorDelegate.queryForObject(SqlMapExecutorDelegate.java:493)
+	at com.ibatis.sqlmap.engine.impl.SqlMapSessionImpl.queryForObject(SqlMapSessionImpl.java:106)
+	at org.springframework.orm.ibatis.SqlMapClientTemplate$1.doInSqlMapClient(SqlMapClientTemplate.java:273)
+	at org.springframework.orm.ibatis.SqlMapClientTemplate.execute(SqlMapClientTemplate.java:203)
+	... 61 more
+Caused by: java.sql.SQLSyntaxErrorException: ORA-00942: 表或视图不存在
+
+	at oracle.jdbc.driver.SQLStateMapping.newSQLException(SQLStateMapping.java:91)
+	at oracle.jdbc.driver.DatabaseError.newSQLException(DatabaseError.java:133)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:206)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:455)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:413)
+	at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:1034)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:194)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:791)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeMaybeDescribe(T4CPreparedStatement.java:866)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1186)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3387)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3488)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1374)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.execute(NewProxyPreparedStatement.java:989)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.ibatis.common.jdbc.logging.PreparedStatementLogProxy.invoke(PreparedStatementLogProxy.java:62)
+	at com.sun.proxy.$Proxy53.execute(Unknown Source)
+	at com.ibatis.sqlmap.engine.execution.SqlExecutor.executeQuery(SqlExecutor.java:185)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.sqlExecuteQuery(MappedStatement.java:221)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeQueryWithCallback(MappedStatement.java:189)
+	... 67 more
+2016-03-14 11:18:49,878 DEBUG [org.springframework.web.method.HandlerMethod] - Method [queryByEntity] returned [<map>
+  <entry>
+    <string>response</string>
+    <string>参数必须是Fkryjbxx对象</string>
+  </entry>
+  <entry>
+    <string>resStatus</string>
+    <string>0</string>
+  </entry>
+</map>]
+2016-03-14 11:18:49,878 DEBUG [org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite] - Testing if return value handler [org.springframework.web.servlet.mvc.method.annotation.ModelAndViewMethodReturnValueHandler@6cd05f5] supports [class java.lang.String]
+2016-03-14 11:18:49,878 DEBUG [org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite] - Testing if return value handler [org.springframework.web.method.annotation.ModelMethodProcessor@260f204b] supports [class java.lang.String]
+2016-03-14 11:18:49,878 DEBUG [org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite] - Testing if return value handler [org.springframework.web.servlet.mvc.method.annotation.ViewMethodReturnValueHandler@7541fb74] supports [class java.lang.String]
+2016-03-14 11:18:49,878 DEBUG [org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite] - Testing if return value handler [org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor@587a7ff1] supports [class java.lang.String]
+2016-03-14 11:18:49,878 DEBUG [org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite] - Testing if return value handler [org.springframework.web.servlet.mvc.method.annotation.CallableMethodReturnValueHandler@6dbcf84b] supports [class java.lang.String]
+2016-03-14 11:18:49,879 DEBUG [org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite] - Testing if return value handler [org.springframework.web.servlet.mvc.method.annotation.DeferredResultMethodReturnValueHandler@6c48061b] supports [class java.lang.String]
+2016-03-14 11:18:49,879 DEBUG [org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite] - Testing if return value handler [org.springframework.web.servlet.mvc.method.annotation.AsyncTaskMethodReturnValueHandler@49a44beb] supports [class java.lang.String]
+2016-03-14 11:18:49,879 DEBUG [org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite] - Testing if return value handler [org.springframework.web.method.annotation.ModelAttributeMethodProcessor@5934c1c5] supports [class java.lang.String]
+2016-03-14 11:18:49,879 DEBUG [org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite] - Testing if return value handler [org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor@44faf1f5] supports [class java.lang.String]
+2016-03-14 11:18:49,880 DEBUG [org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor] - Written [<map>
+  <entry>
+    <string>response</string>
+    <string>参数必须是Fkryjbxx对象</string>
+  </entry>
+  <entry>
+    <string>resStatus</string>
+    <string>0</string>
+  </entry>
+</map>] as "text/plain;charset=UTF-8" using [org.springframework.http.converter.StringHttpMessageConverter@1b86be2e]
+2016-03-14 11:18:49,880 DEBUG [org.springframework.web.servlet.DispatcherServlet] - Null ModelAndView returned to DispatcherServlet with name 'springmvc': assuming HandlerAdapter completed request handling
+2016-03-14 11:18:49,880 DEBUG [org.springframework.web.servlet.DispatcherServlet] - Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@679daafe
+2016-03-14 11:18:49,880 DEBUG [org.springframework.web.servlet.DispatcherServlet] - Successfully completed request
+2016-03-14 11:18:49,880 DEBUG [org.springframework.web.context.support.XmlWebApplicationContext] - Publishing event in WebApplicationContext for namespace 'springmvc-servlet': ServletRequestHandledEvent: url=[/jwzh-province/FkryRyjbxx/queryByEntity]; client=[127.0.0.1]; method=[POST]; servlet=[springmvc]; session=[null]; user=[null]; time=[66ms]; status=[OK]
+2016-03-14 11:18:49,881 DEBUG [org.springframework.web.context.support.XmlWebApplicationContext] - Publishing event in Root WebApplicationContext: ServletRequestHandledEvent: url=[/jwzh-province/FkryRyjbxx/queryByEntity]; client=[127.0.0.1]; method=[POST]; servlet=[springmvc]; session=[null]; user=[null]; time=[66ms]; status=[OK]

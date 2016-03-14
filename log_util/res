@@ -1,0 +1,3 @@
+--start-------1----------
+select t.*,    to_char(tbsj,'yyyy-mm-dd hh24:mi:ss') as tbsjstr,    to_char(gxsj,'yyyy-mm-dd hh24:mi:ss') as gxsjstr,    to_char(csrq,'yyyy-MM-dd') as csrqstr,     to_char(yxqx,'yyyy-MM-dd') as yxqxstr,     (select ORGNAME from org_organization where ORGCODE=SSXJGAJG) as SSXJGAJGMC,    (select ORGNAME from org_organization where ORGCODE=SSPCS) as SSPCSMC    from FK_RYJBXX t where rownum = 1                                                                   and RYXH = 'null'                                                                                                                                         ORDER BY TBSJ DESC;
+--end---------1----------
