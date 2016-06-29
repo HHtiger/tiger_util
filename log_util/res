@@ -1,3 +1,39 @@
 --start-------1----------
-select t.*,    to_char(tbsj,'yyyy-mm-dd hh24:mi:ss') as tbsjstr,    to_char(gxsj,'yyyy-mm-dd hh24:mi:ss') as gxsjstr,    to_char(csrq,'yyyy-MM-dd') as csrqstr,     to_char(yxqx,'yyyy-MM-dd') as yxqxstr,     (select ORGNAME from org_organization where ORGCODE=SSXJGAJG) as SSXJGAJGMC,    (select ORGNAME from org_organization where ORGCODE=SSPCS) as SSPCSMC    from FK_RYJBXX t where rownum = 1                                                                   and RYXH = 'null'                                                                                                                                         ORDER BY TBSJ DESC;
+update DW_DWJBXXB set  XT_ZHXGSJ='2016-03-31 10:58:06',XT_ZHXGRXM='李长荣', XT_ZHXGRID='210203194703112293',XT_ZHXGRBM='解放责任区2',XT_ZHXGRBMID='210204419902',XT_ZHXGIP='127.0.0.1',XT_ZXBZ='1',XT_ZXYY='aaa'      where ID = '1674f320866047c1a70441d1c88308d2';
 --end---------1----------
+--start-------2----------
+select * from DW_CYRYXXB t where t.dwid ='1674f320866047c1a70441d1c88308d2' and t.xt_zxbz = '0';
+--end---------2----------
+--start-------3----------
+DELETE FROM DW_DWXZXXB T WHERE T.ID = '1674f320866047c1a70441d1c88308d2';
+--end---------3----------
+--start-------4----------
+SELECT count(1)      FROM DW_DWJBXXB A      WHERE A.XT_ZXBZ = '0'                          and     a.glbmid = '210204419902'                      and     a.dwmc || a.dz_dwdzxz  like '%bbb%';
+--end---------4----------
+--start-------5----------
+SELECT * FROM (      SELECT ROWNUM R ,M.* FROM (      SELECT A.*      FROM DW_DWJBXXB A      WHERE A.XT_ZXBZ = '0'                          and     a.glbmid = '210204419902'                      and     a.dwmc || a.dz_dwdzxz  like '%bbb%'                             ) m     where rownum <= '24' ) where r > '0';
+--end---------5----------
+--start-------6----------
+SELECT D.ZBX, D.ZBY, T.DZ_DWDZDM, T.DZ_DWDZXZ, T.DWMC      FROM BZDZ_ADD_MLDZDXB D, DW_DWJBXXB T   WHERE D.MLDZID = T.DZ_DWDZMLPDM       AND D.ZBX IS NOT NULL       AND D.ZBY IS NOT NULL       AND T.ID IN           ('0fed2cd2021540f3b72b5128c69e159e','1ccdf534bdde44c0afbc139023a5928d','e3e7e55b521f48d6a2f4f4a2b2ea4a82');
+--end---------6----------
+--start-------7----------
+select * from ( select t.*,instr(t.ywurl,'http://') as bool    from sys_message t where sfck='0' and      ((t.jsrdm = '210203194703112293' and t.jslx = '0') or (t.jsrssdwdm = '210204419902' and t.jslx = '1'))       and    (t.xxlb = '2' OR t.xxlb = '5'  OR t.xxlb = '6'  OR t.xxlb = '7')                         order by sfck,fssj desc ) t where rownum <=8;
+--end---------7----------
+--start-------8----------
+select * from ( select t.*,instr(t.ywurl,'http://') as bool    from sys_message t where sfck='0' and      ((t.jsrdm = '210203194703112293' and t.jslx = '0') or (t.jsrssdwdm = '210204419902' and t.jslx = '1'))    and     t.xxlb ='1'                            order by sfck,fssj desc ) t where rownum <=8;
+--end---------8----------
+--start-------9----------
+select * from jcj.JCJ_jjXXB A WHERE A.xt_zxbz='0'                    and       A.stationhousecode = '210204419902'          and       rownum < '8'          and       A.xt_lrsj like  '2016-03-31' || '%'        order by xt_lrsj desc;
+--end---------9----------
+--start-------10----------
+select * from ( select t.*,instr(t.ywurl,'http://') as bool    from sys_message t where sfck='0' and      ((t.jsrdm = '210203194703112293' and t.jslx = '0') or (t.jsrssdwdm = '210204419902' and t.jslx = '1'))          and       (t.xxlb = '3' OR t.xxlb = '4')                      order by sfck,fssj desc ) t where rownum <=8;
+--end---------10----------
+--start-------11----------
+insert into LOG_INFO (NUM_ID, USER_ID,ORGANIZATION,USER_NAME,TERMINAL_ID,OPERATE_TIME,OPERATE_CONDITION,   OPERATE_RESULT,MODNAME,FUNCNAME,OPERATE_TYPE,TABLE_NAME,TABLE_PK,OPERATE_CONTENT,QUERY_FILED ,OPERATE_JSONCONTENT)   values(SEQ_PK.NEXTVAL , '210203194703112293' ,'解放责任区2' ,'李长荣' ,'127.0.0.1','20160331105838',   '[{}]','1','系统消息表','查询','1',   '','','','','');
+--end---------11----------
+--start-------12----------
+insert into LOG_INFO (NUM_ID, USER_ID,ORGANIZATION,USER_NAME,TERMINAL_ID,OPERATE_TIME,OPERATE_CONDITION,   OPERATE_RESULT,MODNAME,FUNCNAME,OPERATE_TYPE,TABLE_NAME,TABLE_PK,OPERATE_CONTENT,QUERY_FILED ,OPERATE_JSONCONTENT)   values(SEQ_PK.NEXTVAL , '210203194703112293' ,'解放责任区2' ,'李长荣' ,'127.0.0.1','20160331105838',   '[{}]','1','系统消息表','查询','1',   '','','','','');
+--end---------12----------
+--start-------13----------
+insert into LOG_INFO (NUM_ID, USER_ID,ORGANIZATION,USER_NAME,TERMINAL_ID,OPERATE_TIME,OPERATE_CONDITION,   OPERATE_RESULT,MODNAME,FUNCNAME,OPERATE_TYPE,TABLE_NAME,TABLE_PK,OPERATE_CONTENT,QUERY_FILED ,OPERATE_JSONCONTENT)   values(SEQ_PK.NEXTVAL , '210203194703112293' ,'解放责任区2' ,'李长荣' ,'127.0.0.1','20160331105838',   '[{}]','1','系统消息表','查询','1',   '','','','','');
+--end---------13----------

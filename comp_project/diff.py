@@ -13,7 +13,7 @@ class CompObj:
 
 
 def comp_and_move(compObj):
-    log = open('%s.txt' % compObj.log_filename, 'w+', -1, 'utf-8')
+    log = open('%s.log' % compObj.log_filename, 'w+', -1, 'utf-8')
     log.writelines('【%s】 changelist:\n' % compObj.package_url)
     dl_dir = compObj.path1
     sy_dir = compObj.path2
@@ -46,10 +46,10 @@ def comp_and_move(compObj):
 
     # build lose dir
     for key in dir_key_res:
-        if key not in dict_dir_sy.keys():
-            lose_dir = os.path.join(dict_dir_dl[key], key).replace(dl_dir, sy_dir)
-            print('沈阳新建缺失文件夹' + lose_dir)
-            lose_dir_res.append(lose_dir)
+        # if key not in dict_dir_sy.keys():
+        #     lose_dir = os.path.join(dict_dir_dl[key], key).replace(dl_dir, sy_dir)
+        #     print('沈阳新建缺失文件夹' + lose_dir)
+        #     lose_dir_res.append(lose_dir)
 
         if key not in dict_dir_dl.keys():
             lose_dir = os.path.join(dict_dir_sy[key], key).replace(sy_dir, dl_dir)
@@ -79,17 +79,16 @@ def comp_and_move(compObj):
             print('】')
         elif key not in dict_sy.keys():
             sy_lose.append(key)
-            source_dir = os.path.join(dict_dl[key], key)
-            target_dir = os.path.join(str(dict_dl[key]).replace(dl_dir, sy_dir), key)
-            shutil.copy(source_dir, target_dir)
-            print('沈阳缺失' + key + '拷贝【', end='')
-            print(source_dir, end='')
-            print('】到【', end='')
-            print(target_dir, end='')
-            print('】')
+            # source_dir = os.path.join(dict_dl[key], key)
+            # target_dir = os.path.join(str(dict_dl[key]).replace(dl_dir, sy_dir), key)
+            # shutil.copy(source_dir, target_dir)
+            # print('沈阳缺失' + key + '拷贝【', end='')
+            # print(source_dir, end='')
+            # print('】到【', end='')
+            # print('】')
         else:
-            bose_have.append(key)
-            print('相同文件' + key)
+           bose_have.append(key)
+           print('相同文件' + key)
 
     log.writelines('*\n')
     log.writelines('*\n')
@@ -99,13 +98,13 @@ def comp_and_move(compObj):
     for i in dl_lose:
         log.writelines(i + '\n')
 
-    log.writelines('*\n')
-    log.writelines('*\n')
-    log.writelines('*沈阳缺失文件(共%d个)\n' % len(sy_lose))
-    log.writelines('*\n')
-    log.writelines('*\n')
-    for i in sy_lose:
-        log.writelines(i + '\n')
+    # log.writelines('*\n')
+    # log.writelines('*\n')
+    # log.writelines('*沈阳缺失文件(共%d个)\n' % len(sy_lose))
+    # log.writelines('*\n')
+    # log.writelines('*\n')
+    # for i in sy_lose:
+    #     log.writelines(i + '\n')
 
     log.writelines('*\n')
     log.writelines('*\n')
@@ -126,29 +125,64 @@ def comp_and_move(compObj):
 
 if __name__ == '__main__':
     # c1 = CompObj()
-    # c1.path1 = 'E:\\tiger\\tiegrWs\\syrk_dalian\\syrk\\sydw\\com\\founder\\sydw'
-    # c1.path2 = 'E:\\tiger\\tiegrWs\\syrk_sy\\syrk\\sydw\\com\\founder\\sydw'
-    # c1.package_url = 'com.founder.sydw'
-    # c1.log_filename = 'java类'
+    # c1.path1 = 'E:\\tiger\\tiegrWs\\syrk_dalian\\syrk\\sydw\\com\\founder\\sydw\\bean'
+    # c1.path2 = 'E:\\tiger\\tiegrWs\\syrk_sy\\syrk\\sydw\\com\\founder\\sydw\\bean'
+    # c1.package_url = 'com.founder.sydw.bean'
+    # c1.log_filename = 'bean包'
     # comp_and_move(c1)
-    #
-    # c2 = CompObj()
-    # c2.path1 = 'E:\\tiger\\tiegrWs\\syrk_dalian\\syrk\\WebRoot\\WEB-INF\\pages\\sydw'
-    # c2.path2 = 'E:\\tiger\\tiegrWs\\syrk_sy\\syrk\\WebRoot\\WEB-INF\\pages\\sydw'
-    # c2.package_url = 'WebRoot\\WEB-INF\\pages'
-    # c2.log_filename = '页面文件'
-    # comp_and_move(c2)
-    #
-    # c3 = CompObj()
-    # c3.path1 = 'E:\\tiger\\tiegrWs\\syrk_dalian\\syrk\\WebRoot\\js\\sydw'
-    # c3.path2 = 'E:\\tiger\\tiegrWs\\syrk_sy\\syrk\\WebRoot\\js\\sydw'
-    # c3.package_url = 'WebRoot\\js\\sydw'
-    # c3.log_filename = 'js文件'
-    # comp_and_move(c3)
 
-    c = CompObj()
-    c.path2 = 'test\\a'
-    c.path1 = 'test\\b'
-    c.log_filename = 'test'
-    c.package_url = 'NONE'
-    comp_and_move(c)
+    # c1 = CompObj()
+    # c1.path1 = 'E:\\tiger\\tiegrWs\\syrk_dalian\\syrk\\sydw\\com\\founder\\sydw\\vo'
+    # c1.path2 = 'E:\\tiger\\tiegrWs\\syrk_sy\\syrk\\sydw\\com\\founder\\sydw\\vo'
+    # c1.package_url = 'com.founder.sydw.vo'
+    # c1.log_filename = 'vo包'
+    # comp_and_move(c1)
+
+    # c1 = CompObj()
+    # c1.path1 = 'E:\\tiger\\tiegrWs\\syrk_dalian\\syrk\\sydw\\com\\founder\\sydw\\controller'
+    # c1.path2 = 'E:\\tiger\\tiegrWs\\syrk_sy\\syrk\\sydw\\com\\founder\\sydw\\controller'
+    # c1.package_url = 'com.founder.sydw.controller'
+    # c1.log_filename = 'controller包'
+    # comp_and_move(c1)
+
+    # c1 = CompObj()
+    # c1.path1 = 'E:\\tiger\\tiegrWs\\syrk_dalian\\syrk\\sydw\\com\\founder\\sydw\\sqlmap'
+    # c1.path2 = 'E:\\tiger\\tiegrWs\\syrk_sy\\syrk\\sydw\\com\\founder\\sydw\\sqlmap'
+    # c1.package_url = 'com.founder.sydw.sqlmap'
+    # c1.log_filename = 'sqlmap包'
+    # comp_and_move(c1)
+
+    # c1 = CompObj()
+    # c1.path1 = 'E:\\tiger\\tiegrWs\\syrk_dalian\\syrk\\sydw\\com\\founder\\sydw\\service'
+    # c1.path2 = 'E:\\tiger\\tiegrWs\\syrk_sy\\syrk\\sydw\\com\\founder\\sydw\\service'
+    # c1.package_url = 'com.founder.sydw.service'
+    # c1.log_filename = 'service包'
+    # comp_and_move(c1)
+
+    # c1 = CompObj()
+    # c1.path1 = 'E:\\tiger\\tiegrWs\\syrk_dalian\\syrk\\sydw\\com\\founder\\sydw\\dao'
+    # c1.path2 = 'E:\\tiger\\tiegrWs\\syrk_sy\\syrk\\sydw\\com\\founder\\sydw\\dao'
+    # c1.package_url = 'com.founder.sydw.dao'
+    # c1.log_filename = 'dao包'
+    # comp_and_move(c1)
+
+    # c1 = CompObj()
+    # c1.path1 = 'E:\\tiger\\tiegrWs\\syrk_dalian\\syrk\\WebRoot\\WEB-INF\\pages\\sydw'
+    # c1.path2 = 'E:\\tiger\\tiegrWs\\syrk_sy\\syrk\\WebRoot\\WEB-INF\\pages\\sydw'
+    # c1.package_url = 'WebRoot.page.sydw'
+    # c1.log_filename = 'WebRoot.page包'
+    # comp_and_move(c1)
+
+    c1 = CompObj()
+    c1.path1 = 'E:\\tiger\\tiegrWs\\syrk_dalian\\syrk\\WebRoot\\js\\sydw'
+    c1.path2 = 'E:\\tiger\\tiegrWs\\syrk_sy\\syrk\\WebRoot\\js\\sydw'
+    c1.package_url = 'WebRoot.js.sydw'
+    c1.log_filename = 'WebRoot.js包'
+    comp_and_move(c1)
+
+    # c = CompObj()
+    # c.path2 = 'test\\a'
+    # c.path1 = 'test\\b'
+    # c.log_filename = 'test'
+    # c.package_url = 'NONE'
+    # comp_and_move(c)
