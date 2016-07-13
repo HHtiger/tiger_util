@@ -35,3 +35,9 @@
 > $ sudo dpkg -i shadowsocks-qt5_2.6.0-1_amd64.deb
 
 ##安装完成。
+
+# 全局代理配置
+## 在.bashrc 中配置：
+> export http_proxy=http://username:password@127.0.0.1:1080
+## 刷新
+> source .bashrc
